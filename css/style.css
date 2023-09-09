@@ -159,8 +159,16 @@ main .product_container .product_card_wrapper {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-main .product_container .product_card_wrapper .product_card {
-  min-width: 60vmin;
+main .product_container::-webkit-scrollbar {
+  display: none;
+}
+main .product_container::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.product_card {
+  min-width: 270px;
+  width: 80vw;
   max-width: 300px;
   padding: 20px 19px;
   display: flex;
@@ -169,7 +177,7 @@ main .product_container .product_card_wrapper .product_card {
   box-shadow: 0px 1.76786px 14.14286px -1.76786px rgba(0, 0, 0, 0.25);
   gap: 25px;
 }
-main .product_container .product_card_wrapper .product_card .whatsapp_order {
+.product_card .whatsapp_order {
   border: 1px solid var(--whatsapp);
   border-radius: 500px;
   background-color: white;
@@ -184,40 +192,11 @@ main .product_container .product_card_wrapper .product_card .whatsapp_order {
   padding: 5px 20px;
   transition: all 0.5s;
 }
-main .product_container .product_card_wrapper .product_card .whatsapp_order:hover {
+.product_card .whatsapp_order:hover {
   padding: 5px 30px;
 }
-main .product_container .product_card_wrapper .product_card .whatsapp_order img {
+.product_card .whatsapp_order img {
   height: 1rem;
-}
-main .product_container .product_card_wrapper .last_card {
-  text-decoration: none;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 170px;
-  box-shadow: none;
-  margin-left: 0px !important;
-  aspect-ratio: 1/1;
-}
-main .product_container .product_card_wrapper .last_card > div {
-  width: 50px;
-  display: flex;
-  aspect-ratio: 1/1;
-  border-radius: 500px;
-  align-items: center;
-  justify-content: center;
-  background: lightgray;
-}
-main .product_container .product_card_wrapper .last_card > div img {
-  height: 1.2rem;
-}
-main .product_container .product_card_wrapper::-webkit-scrollbar {
-  display: none;
-}
-main .product_container .product_card_wrapper::-webkit-scrollbar-thumb {
-  display: none;
 }
 
 #whatsapp_chat {
@@ -243,4 +222,21 @@ footer {
   color: white;
   width: 100vw;
   height: 50px;
+}
+
+@media not screen and (max-width: 1150px) {
+  .modal-body .product_wrapper_in_modal {
+    width: 1002px;
+  }
+}
+@media (min-width: 775px) and (max-width: 1150px) {
+  .modal-body .product_wrapper_in_modal {
+    width: 670px;
+  }
+}
+@media (max-width: 774px) {
+  .modal-body .product_wrapper_in_modal {
+    width: -moz-min-content;
+    width: min-content;
+  }
 }/*# sourceMappingURL=style.css.map */
