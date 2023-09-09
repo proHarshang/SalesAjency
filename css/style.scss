@@ -126,6 +126,114 @@ body::-webkit-scrollbar-thumb {
   max-width: 700px;
 }
 
+main {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  .product_container {
+    .company_heading {
+      display: flex;
+      align-items: flex-end;
+      align-items: center;
+      gap: 10px;
+      padding-left: 10px;
+      & div > img {
+        height: 2rem;
+      }
+      h5 {
+        margin-bottom: 0;
+      }
+      a {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        &:hover {
+          text-decoration: underline !important;
+        }
+        img {
+          height: 0.7rem;
+          margin-top: 3px;
+        }
+      }
+    }
+    .product_card_wrapper {
+      overflow-x: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 30px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      .product_card {
+        min-width: 60vmin;
+        max-width: 300px;
+        padding: 20px 19px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 7px;
+        box-shadow: 0px 1.76786px 14.14286px -1.76786px rgba(0, 0, 0, 0.25);
+        gap: 25px;
+        // &:nth-of-type(1) {
+        //   margin-left: 25px;
+        // }
+
+        .whatsapp_order {
+          border: 1px solid var(--whatsapp);
+          border-radius: 500px;
+          background-color: white;
+          color: var(--whatsapp);
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: max-content;
+          gap: 8px;
+          padding: 5px 20px;
+          transition: all 0.5s;
+          &:hover {
+            padding: 5px 30px;
+          }
+          img {
+            height: 1rem;
+          }
+        }
+      }
+      .last_card {
+        text-decoration: none;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 170px;
+        box-shadow: none;
+        margin-left: 0px !important;
+        aspect-ratio: 1/1;
+        & > div {
+          width: 50px;
+          display: flex;
+          aspect-ratio: 1/1;
+          border-radius: 500px;
+          align-items: center;
+          justify-content: center;
+          background: lightgray;
+          img {
+            height: 1.2rem;
+          }
+        }
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        display: none;
+      }
+    }
+  }
+}
+
 #whatsapp_chat {
   text-decoration: none;
   height: 43px;

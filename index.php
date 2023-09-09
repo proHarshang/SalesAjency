@@ -13,6 +13,21 @@
 </head>
 
 <body>
+    <script>
+        function product(title) {
+            let msg = `I want to Order products of ${title}`
+            let elem = `<div class="product_card">
+                    <h4 class="title fw-bold">${title}</h4>
+                    <div class="company d-flex flex-column">
+                        <span class="text-secondary lh-1">Company</span>
+                        <span class="company_name">Undefined</span>
+                    </div>
+                    <a href="https://wa.me/919898490529?text=${msg}" target="_blank" class="whatsapp_order"><img src="images/whatsapp_order.svg" alt="Whatsapp Order"><span>Order Now</span></a>
+                </div>`;
+            document.write(elem);
+        }
+    </script>
+
     <!-- preloader -->
     <div class="container-fluid" id="preloader">
         <div class="d-flex flex-column align-items-center">
@@ -34,6 +49,79 @@
     </nav>
 
     <p class="info_paragraph fs-6 lh-sm mx-auto my-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta nemo, eaque voluptate magni deserunt aut exercitationem quia quae modi voluptatibus. A, reiciendis ex? Asperiores quidem, laboriosam expedita dolor quas amet ipsum.</p>
+
+    <main>
+        <div class="product_container">
+            <div class="company_heading px-sm-5 px-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="images/Vasant.webp" alt="Vasant masala">
+                    <h5>Vasant Masala</h5>
+                </div>
+                <a href="Vasant_masala.php" class="text-dark text-decoration-none text-nowrap"><span>Show all</span><img src="images/angle_right.svg" alt=""></a>
+            </div>
+            <div class="product_card_wrapper px-sm-5 px-3" data-company="Vasant Masala">
+                <script>
+                    product("Garam masala powder");
+                    product("Garam masala powder");
+                    product("Garam masala powder");
+                </script>
+            </div>
+        </div>
+        <div class="product_container">
+            <div class="company_heading px-sm-5 px-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="images/Perfetti.webp" alt="Perfetti">
+                    <h5>Perfetti</h5>
+                </div>
+                <a href="Perfetti.php" class="text-dark text-decoration-none text-nowrap"><span>Show all</span><img src="images/angle_right.svg" alt=""></a>
+            </div>
+            <div class="product_card_wrapper px-sm-5 px-3" data-company="Perfetti">
+                <script>
+                    product("Garam masala powder");
+                    product("Garam masala powder");
+                    product("Garam masala powder");
+                </script>
+            </div>
+        </div>
+        <div class="product_container">
+            <div class="company_heading px-sm-5 px-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="images/Eveready.webp" alt="Eveready">
+                    <h5>Eveready</h5>
+                </div>
+                <a href="Eveready.php" class="text-dark text-decoration-none text-nowrap"><span>Show all</span><img src="images/angle_right.svg" alt=""></a>
+            </div>
+            <div class="product_card_wrapper px-sm-5 px-3" data-company="Eveready">
+                <script>
+                    product("Garam masala powder");
+                    product("Garam masala powder");
+                    product("Garam masala powder");
+                </script>
+            </div>
+        </div>
+        <div class="product_container">
+            <div class="company_heading px-sm-5 px-3 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="images/Thames.webp" alt="Thames">
+                    <h5>Thames</h5>
+                </div>
+                <a href="Thames.php" class="text-dark text-decoration-none text-nowrap"><span>Show all</span><img src="images/angle_right.svg" alt=""></a>
+            </div>
+            <div class="product_card_wrapper px-sm-5 px-3" data-company="Thames">
+                <script>
+                    product("Garam masala powder");
+                    product("Garam masala powder");
+                    product("Garam masala powder");
+                </script>
+                <!-- <a href="Vasant_masala" class="product_card last_card">
+                    <div class="rounded-circle bg-light">
+                        <img src="images/angle_right.svg" alt="Show all">
+                    </div>
+                    <span>Show all</span>
+                </a> -->
+            </div>
+        </div>
+    </main>
 
     <!-- fixed whatsapp chat btn -->
     <a id="whatsapp_chat"><img src="images/whatsapp_chat.svg" alt="Whatsapp chat icon"></a>
