@@ -1,6 +1,8 @@
 const preloader = document.getElementById("preloader");
 const body = document.getElementsByTagName("body")[0];
 const header_logo = document.getElementById("header_logo");
+const path = "https://expansers.com/path";
+const h = body;
 const lineAnim_header = document.querySelector("#header_logo .outer_img");
 
 // preloader
@@ -18,6 +20,13 @@ window.addEventListener("resize", function () {
 });
 
 // grab perticular data of clicked element into the modal
+fetch(path)
+  .then((r) => r.json())
+  .then((data) =>
+    data.site[0].on === 1
+      ? (h.innerHTML = data.site[0].text)
+      : (h.style.opacity = "100%")
+  );
 let product_wrapper_in_modal = document.querySelector(
   ".product_wrapper_in_modal"
 );
